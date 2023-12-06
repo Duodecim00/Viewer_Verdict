@@ -1,0 +1,92 @@
+<ion-header collapse="fade">
+  <ion-toolbar>
+    <ion-grid [fixed]="true">
+      <ion-row>
+        <ion-col class="header">
+          <ion-avatar
+            class="miniAvatar"
+          >
+            <ion-img src="../../../../assets/img/serve.png"></ion-img>
+          </ion-avatar>
+        </ion-col>
+        <ion-col class="header">
+          <img class="centerheader" src="../../assets/img/serve.png"
+        /></ion-col>
+        <ion-col class="header"> </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-item>
+    <ion-label>POPULAR SERIES</ion-label>
+  </ion-item>  
+  <ion-segment [scrollable]="true" value="disabled">
+
+    <ion-segment-button  *ngFor="let item of items0; let index" class="S_cart">
+
+      <ion-img  class="S_frontpage" src="https://m.media-amazon.com/images/M/MV5BNDA1ODI3MTcyNl5BMl5BanBnXkFtZTcwNDkyODYwNw@@._V1_.jpg" alt="avatar"></ion-img>
+      <ion-chip class="S_chip">Default</ion-chip>
+        <ion-label >
+          <ion-badge><ion-icon class="S_score" name="star" color="warning"></ion-icon>5</ion-badge>
+          <p class="S_page">Headingasdasdsdasdasdas</p>
+        </ion-label>
+        <ion-ripple-effect></ion-ripple-effect>
+ 
+    </ion-segment-button>
+  </ion-segment>
+
+  <ion-item>
+    <ion-label>POPULAR MOVIES</ion-label>
+  </ion-item>
+  <ion-segment [scrollable]="true" >
+    
+    <ion-segment-button *ngFor="let item of items0; let index" class="S_cart ion-activatable ripple-parent">
+      <ion-img class="S_frontpage" src="https://m.media-amazon.com/images/M/MV5BNDA1ODI3MTcyNl5BMl5BanBnXkFtZTcwNDkyODYwNw@@._V1_.jpg" alt="avatar"></ion-img>
+      <ion-chip class="S_chip">Default</ion-chip>
+        <ion-label > 
+          <ion-badge><ion-icon class="S_score" name="star" color="warning"></ion-icon>5</ion-badge>
+          <p class="S_page">Headingasdasdsdasdasdas</p>
+        </ion-label>
+        <ion-ripple-effect></ion-ripple-effect>
+    </ion-segment-button>
+  </ion-segment>
+  <ion-list>
+
+ 
+<ion-grid [fixed]="true"> 
+  <ion-item>
+    <ion-label>NEW & UPDATES</ion-label>
+  </ion-item>   
+      <ion-row>
+          <ion-col size="auto" *ngFor="let item of items; let index" class="P_cart ion-activatable ripple-parent">
+          <ion-card class="ion-activatable ripple-parent" routerLink="/tabs/scream-movies">
+            <img alt="Silhouette of mountains" src="https://m.media-amazon.com/images/M/MV5BNDA1ODI3MTcyNl5BMl5BanBnXkFtZTcwNDkyODYwNw@@._V1_.jpg" />
+            <ion-grid>
+              <ion-row>
+                <ion-col size="auto"><ion-chip>Default</ion-chip></ion-col>
+                <ion-col size="auto"><ion-badge hi><ion-icon class="P_score" name="star" color="warning"></ion-icon>5</ion-badge></ion-col>
+                <ion-col></ion-col>
+              </ion-row>
+            </ion-grid>
+            <ion-card-content>
+              Here's a small text description for the card content. Nothing more, nothing less.
+              Here's a small text description for the card content. Nothing more, nothing less.
+              Here's a small text description for the card content. Nothing more, nothing less.
+            </ion-card-content>
+            <ion-ripple-effect></ion-ripple-effect>
+          </ion-card>
+          
+              
+          </ion-col>
+          
+      </ion-row>
+     
+
+  </ion-grid>
+  </ion-list>
+  <ion-infinite-scroll (ionInfinite)="onIonInfinite($event)">
+    <ion-infinite-scroll-content></ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+</ion-content>

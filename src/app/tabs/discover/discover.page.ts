@@ -1,13 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 
 import { InfiniteScrollCustomEvent } from '@ionic/angular';
-
 @Component({
-  selector: 'app-home',
-  templateUrl: 'home.page.html',
-  styleUrls: ['home.page.scss'],
+  selector: 'app-discover',
+  templateUrl: './discover.page.html',
+  styleUrls: ['./discover.page.scss'],
 })
-export class HomePage implements OnInit {
+export class DiscoverPage implements OnInit {
   items:any = [];
   items0:any = [];
 

@@ -25,3 +25,69 @@
 #container a {
   text-decoration: none;
 }
+
+ion-col.pageHead{
+  text-align: center;
+}
+
+ion-col.P_cart{
+  height: auto;
+  width: 158px;
+  padding: 12px;
+}
+
+img.P_frontpage{
+  height: 152px;
+  width: 108px;
+}
+
+p.P_page{
+  font-size: 18px;
+}
+
+
+ion-segment-button.S_cart{
+  margin-top: 10px;
+  height: auto;
+  width: 158px;
+  background: none;
+}
+
+img.S_frontpage{
+  height: 152px;
+  width: 108px;
+}
+
+p.S_page{
+  margin-left: 0px;
+  font-size: 10px;
+}
+
+ion-chip.S_chip{
+  font-size: 9px;
+}
+
+ion-icon.P_score{
+  padding-top: 10px;
+  height: 20px;
+  width: 20px;
+}
+ion-icon.S_score{
+  margin-top: 5px;
+  height: 10px;
+  width: 10px;
+}
+
+ion-icon.watchmark{
+  margin-right: 5px;
+}
+
+.ripple-parent {
+  position: relative;
+  overflow: hidden;
+
+}
+
+ion-segment{
+  background: #1c1c1d;
+}
