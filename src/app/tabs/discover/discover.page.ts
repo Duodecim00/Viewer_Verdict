@@ -21,7 +21,7 @@ export class DiscoverPage implements OnInit {
     this.generateItems();
   }
 
-    generateItems() {
+   private generateItems() {
       //controla el primer carrusel
     const count = this.items.length + 1;
     const count0 = this.items0.length + 1;

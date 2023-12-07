@@ -10,7 +10,7 @@
           </ion-avatar>
         </ion-col>
         <ion-col class="header">
-          <img class="centerheader" src="../../assets/img/logo VV en blanco_mini.png"
+          <img class="centerheader" src="../../assets/img/logo_VV_blanco_mini.png"
         /></ion-col>
         <ion-col class="header"> </ion-col>
       </ion-row>
@@ -18,22 +18,26 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content color="viewer_background" >
   <ion-refresher slot="fixed" [pullFactor]="0.5" [pullMin]="100" [pullMax]="200" (ionRefresh)="handleRefresh($event)">
     <ion-refresher-content></ion-refresher-content>
   </ion-refresher>
   
-  <ion-item>
-    <ion-label>POPULAR SERIES</ion-label>
-  </ion-item>  
-  <ion-segment [scrollable]="true" value="disabled">
+<ion-toolbar>
+  <ion-label class="title">POPULAR SERIES</ion-label>
+</ion-toolbar>
+    
 
+  <ion-segment [scrollable]="true" value="disabled">
     <ion-segment-button  *ngFor="let item of items; let index" class="S_cart">
 
       <ion-img  class="S_frontpage" src="https://m.media-amazon.com/images/M/MV5BNDA1ODI3MTcyNl5BMl5BanBnXkFtZTcwNDkyODYwNw@@._V1_.jpg" alt="avatar"></ion-img>
       <ion-chip class="S_chip">Default</ion-chip>
         <ion-label >
-          <ion-badge><ion-icon class="S_score" name="star" color="warning"></ion-icon>5</ion-badge>
+          <ion-button size="small">
+                  <ion-icon color="warning" slot="start" name="star"></ion-icon>
+                  5
+                </ion-button>
           <p class="S_page">Headingasdasdsdasdasdas</p>
         </ion-label>
         <ion-ripple-effect></ion-ripple-effect>
@@ -41,16 +45,19 @@
     </ion-segment-button>
   </ion-segment>
 
-  <ion-item>
-    <ion-label>POPULAR MOVIES</ion-label>
-  </ion-item>
+  <ion-toolbar> 
+    <ion-label class="title" >POPULAR MOVIES</ion-label>
+</ion-toolbar>
   <ion-segment [scrollable]="true" >
     
     <ion-segment-button *ngFor="let item of items0; let index" class="S_cart ion-activatable ripple-parent">
       <ion-img class="S_frontpage" src="https://m.media-amazon.com/images/M/MV5BNDA1ODI3MTcyNl5BMl5BanBnXkFtZTcwNDkyODYwNw@@._V1_.jpg" alt="avatar"></ion-img>
       <ion-chip class="S_chip">Default</ion-chip>
         <ion-label > 
-          <ion-badge><ion-icon class="S_score" name="star" color="warning"></ion-icon>5</ion-badge>
+          <ion-button size="small">
+            <ion-icon color="warning" slot="start" name="star"></ion-icon>
+            5
+          </ion-button>
           <p class="S_page">Headingasdasdsdasdasdas</p>
         </ion-label>
         <ion-ripple-effect></ion-ripple-effect>
@@ -59,18 +66,21 @@
   <ion-list>
 
  
-<ion-grid [fixed]="true"> 
-  <ion-item>
-    <ion-label>NEW & UPDATES</ion-label>
-  </ion-item>   
-      <ion-row>
-          <ion-col size="auto" *ngFor="let item of items; let index" class="P_cart ion-activatable ripple-parent">
-          <ion-card class="ion-activatable ripple-parent" routerLink="/tabs/scream-movies">
+<ion-grid [fixed]="true" > 
+      <ion-row lines="none"> 
+        <ion-toolbar> 
+        <ion-label  class="title">NEW & UPDATES</ion-label>
+      </ion-toolbar>
+          <ion-col   size="auto"  class="P_cart ion-activatable ripple-parent">
+          <ion-card *ngFor="let item of items; let index" class="ion-activatable ripple-parent" routerLink="/tabs/scream-movies">
             <img alt="Silhouette of mountains" src="https://m.media-amazon.com/images/M/MV5BNDA1ODI3MTcyNl5BMl5BanBnXkFtZTcwNDkyODYwNw@@._V1_.jpg" />
             <ion-grid>
               <ion-row>
                 <ion-col size="auto"><ion-chip>Default</ion-chip></ion-col>
-                <ion-col size="auto"><ion-badge hi><ion-icon class="P_score" name="star" color="warning"></ion-icon>5</ion-badge></ion-col>
+                <ion-col size="auto"><ion-button>
+                  <ion-icon color="warning" slot="start" name="star"></ion-icon>
+                  5
+                </ion-button></ion-col>
                 <ion-col></ion-col>
               </ion-row>
             </ion-grid>

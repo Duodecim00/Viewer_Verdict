@@ -1,12 +1,23 @@
 import { Component, OnInit } from '@angular/core';
 
 
+
 @Component({
   selector: 'app-scream-movies',
   templateUrl: './scream-movies.page.html',
   styleUrls: ['./scream-movies.page.scss'],
 })
-export class ScreamMoviesPage{
+export class ScreamMoviesPage implements OnInit{
+
+  items:any = [];
+
+  ngOnInit() {
+    for (let i = 1; i < 9; i++) {
+      this.items.push(`${i}`);
+    }
+
+    console.log(this.data);
+  }
 
   stars: number[] = [1,2,3,4,5]
 
@@ -18,9 +29,21 @@ export class ScreamMoviesPage{
   constructor() { }
 
 
+  //control del modal
+  isModalRating = false;
+  isModalAudience = false;
+  isModalCritics = false
 
-  ngOnInit() {
-    console.log(this.data);
+  setOpenAudience(isOpen: boolean) {
+    this.isModalAudience = isOpen;
+  }
+
+  setOpenCritics(isOpen: boolean) {
+    this.isModalCritics = isOpen;
+  }
+
+  setOpenRating(isOpen: boolean) {
+    this.isModalRating = isOpen;
   }
 
   //counting stars
