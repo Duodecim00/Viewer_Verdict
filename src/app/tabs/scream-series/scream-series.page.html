@@ -9,14 +9,15 @@
 <ion-content>
 
   <ion-card>
-    <ion-img  class="S_frontpage" src="https://m.media-amazon.com/images/M/MV5BNDA1ODI3MTcyNl5BMl5BanBnXkFtZTcwNDkyODYwNw@@._V1_.jpg" alt="avatar"></ion-img>
+    <ion-img  class="S_frontpage" src="https://upload.wikimedia.org/wikipedia/en/d/de/Oban_promo_poster.jpg" alt="avatar"></ion-img>
   </ion-card>
   <ion-card style="color: #fff;">
     <ion-card-header>
       <ion-card-title>XXXXXXXXXXXXXXXXXXXXXXXXXX</ion-card-title>
       <ion-card-subtitle><label for="">type:</label><ion-chip class="serie_movie" color="secondary">Secondary</ion-chip></ion-card-subtitle>
       <ion-card-subtitle><label for="">Release Date :</label><ion-chip class="serie_movie" color="secondary">MMM(Dic) DDD(17) YYY(22)</ion-chip></ion-card-subtitle>
-      <ion-card-subtitle><label for="">Runtime:</label><ion-chip class="serie_movie" color="secondary">XXH XXmin</ion-chip></ion-card-subtitle>
+      <ion-card-subtitle><label for="">episodes:</label><ion-chip class="serie_movie" color="secondary">XX</ion-chip></ion-card-subtitle>
+      <ion-card-subtitle><label for="">seasons:</label><ion-chip class="serie_movie" color="secondary">XX</ion-chip></ion-card-subtitle>
       <ion-card-subtitle><label for="">Genre:</label>
         <ion-chip class="gender" color="secondary">Secondary</ion-chip>
         <ion-chip class="gender" color="secondary">Secondary</ion-chip>
@@ -54,7 +55,7 @@
           </ion-col>
           <ion-col>
                         <ion-thumbnail >
-      <ion-badge>5</ion-badge>
+      <ion-badge class="scoreG">5</ion-badge>
     </ion-thumbnail>
           </ion-col>
         </ion-row>
@@ -76,7 +77,7 @@
       </ion-col>
       <ion-col>
                     <ion-thumbnail >
-  <ion-badge>5</ion-badge>
+  <ion-badge class="scoreG">5</ion-badge>
 </ion-thumbnail>
       </ion-col>
     </ion-row>
@@ -118,7 +119,7 @@
           </video>
   
         <ion-label >
-          <p class="S_page">________________________________________________</p>
+          <p class="S_page">_______________________________</p>
         </ion-label>
   
     </ion-segment-button>
@@ -134,7 +135,7 @@
     <ion-img  class="S_frontpage" src="https://blog.stcloudstate.edu/japanesefilms/files/2021/04/redline-1200-1200-675-675-crop-000000.jpg" alt="avatar"></ion-img>
 
       <ion-label >
-        <p class="S_page">________________________________________________</p>
+        <p class="S_page">_______________________________</p>
       </ion-label>
   </ion-segment-button> 
   
@@ -155,6 +156,35 @@
   </ul>
 </ion-card-content>
 </ion-card>
+
+<ion-toolbar> 
+  <ion-label class="title" >SEASONS</ion-label>
+</ion-toolbar>
+
+<ion-card-content>
+    <ion-list>
+      <ion-card  *ngFor="let item of itemsSeasons; let index">
+      <ion-toolbar class="ion-activatable ripple-parent">
+        <ion-thumbnail style="height: auto; width: 90px; " slot="start">
+          <img alt="Silhouette of mountains" src="https://upload.wikimedia.org/wikipedia/en/d/de/Oban_promo_poster.jpg" />
+        </ion-thumbnail>
+        <ion-card-header>
+          <ion-card-subtitle style="color: #fff;">
+            XXXXXXXXXXXXXXXXXXXXXXXXX
+          </ion-card-subtitle>
+          <ion-card-subtitle><ion-chip class="gender" color="secondary">Secondary</ion-chip></ion-card-subtitle>
+        </ion-card-header>
+            <ion-card-content>Una competición de carreras intergalácticas determina el destino del universo.</ion-card-content>
+    
+        <ion-button  size="small"><ion-icon color="warning" slot="start" name="star"></ion-icon><p style="color: #fff;">5</p></ion-button>
+      <ion-ripple-effect></ion-ripple-effect>
+      </ion-toolbar>
+      
+    </ion-card>
+    
+    </ion-list>
+  </ion-card-content>
+
 </ion-content>
 
 

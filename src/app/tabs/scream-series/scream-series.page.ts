@@ -1,16 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 
-
-
 @Component({
-  selector: 'app-scream-movies',
-  templateUrl: './scream-movies.page.html',
-  styleUrls: ['./scream-movies.page.scss'],
+  selector: 'app-scream-series',
+  templateUrl: './scream-series.page.html',
+  styleUrls: ['./scream-series.page.scss'],
 })
-export class ScreamMoviesPage implements OnInit{
+export class ScreamSeriesPage implements OnInit{
 
   items:any = [];
   itemsVideo:any = [];
+  itemsSeasons:any = [];
 
   ngOnInit() {
     for (let i = 1; i < 9; i++) {
@@ -19,6 +18,9 @@ export class ScreamMoviesPage implements OnInit{
 
     for (let i = 1; i < 4; i++) {
       this.itemsVideo.push(`${i}`);
+    }
+    for (let i = 1; i < 7; i++) {
+      this.itemsSeasons.push(`${i}`);
     }
 
     console.log(this.data);

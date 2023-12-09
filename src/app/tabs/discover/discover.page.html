@@ -29,15 +29,15 @@
     
 
   <ion-segment [scrollable]="true" value="disabled">
-    <ion-segment-button  *ngFor="let item of items; let index" class="S_cart">
+    <ion-segment-button  *ngFor="let item of items; let index" class="S_cart" routerLink="/tabs/scream-series">
 
       <ion-img  class="S_frontpage" src="https://m.media-amazon.com/images/M/MV5BNDA1ODI3MTcyNl5BMl5BanBnXkFtZTcwNDkyODYwNw@@._V1_.jpg" alt="avatar"></ion-img>
       <ion-chip class="S_chip">Default</ion-chip>
         <ion-label >
           <ion-button size="small">
-                  <ion-icon color="warning" slot="start" name="star"></ion-icon>
+                <ion-icon color="warning" slot="start" name="star"></ion-icon>
                   5
-                </ion-button>
+          </ion-button>
           <p class="S_page">Headingasdasdsdasdasdas</p>
         </ion-label>
         <ion-ripple-effect></ion-ripple-effect>
@@ -50,7 +50,7 @@
 </ion-toolbar>
   <ion-segment [scrollable]="true" >
     
-    <ion-segment-button *ngFor="let item of items0; let index" class="S_cart ion-activatable ripple-parent">
+    <ion-segment-button *ngFor="let item of items0; let index" class="S_cart ion-activatable ripple-parent" routerLink="/tabs/scream-movies">
       <ion-img class="S_frontpage" src="https://m.media-amazon.com/images/M/MV5BNDA1ODI3MTcyNl5BMl5BanBnXkFtZTcwNDkyODYwNw@@._V1_.jpg" alt="avatar"></ion-img>
       <ion-chip class="S_chip">Default</ion-chip>
         <ion-label > 

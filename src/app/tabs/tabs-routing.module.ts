@@ -26,6 +26,10 @@ const routes: Routes = [
   },
     ]
   },
+  {
+    path: 'scream-series',
+    loadChildren: () => import('./scream-series/scream-series.module').then( m => m.ScreamSeriesPageModule)
+  },
 
   
 ];
