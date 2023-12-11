@@ -70,7 +70,9 @@ export class CataloguePage implements OnInit {
   }
 
   handleChange(ev:Event) {
-    
+   
   }
+  
+
 
 }

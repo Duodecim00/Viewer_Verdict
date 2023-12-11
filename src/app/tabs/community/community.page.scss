@@ -13,13 +13,15 @@ img.centerheader{
     margin: 0px;
   }
 
-img.avatar{
-    height: auto;
-    width: 100px;
-    border-radius: 100%;
+  ion-avatar.avatar{
+    height: 60px;
+    width: 60px;
 }
 
 ion-badge{
    background:var(--ion-color-viewer_terceari); 
    color: #fff;
+}
+ion-item {
+  --padding-start: 0;
 }

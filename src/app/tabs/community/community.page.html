@@ -16,11 +16,11 @@
       </ion-row>
     </ion-grid>
 
-    <ion-segment value="all">
-      <ion-segment-button >
+    <ion-segment value="PEOPLE">
+      <ion-segment-button value="PEOPLE" >
         <ion-label>PEOPLE</ion-label>
       </ion-segment-button>
-      <ion-segment-button >
+      <ion-segment-button value="GROUPS" >
         <ion-label>GROUPS</ion-label>
       </ion-segment-button>
     </ion-segment>
@@ -30,22 +30,17 @@
 
 
 <ion-content>
-  <ion-item-sliding *ngFor="let item of items; let index">
-    
-    <ion-item >
-      <ion-thumbnail slot="start">
-        
-            <img class="avatar" [src]="'https://picsum.photos/80/80?random=' + index" alt="avatar" />
-          
-      </ion-thumbnail>
-      <ion-label>Sliding Item with Icons Only</ion-label>
-      <ion-badge color="warning">11</ion-badge>
-    </ion-item>
-
-    <ion-item-options side="end">
-      <ion-item-option color="danger">
-        <ion-icon slot="icon-only" name="trash"></ion-icon>
-      </ion-item-option>
-    </ion-item-options>
-  </ion-item-sliding>
+  <ion-card>
+    <ion-card-content>
+      <ion-list>
+        <ion-item routerLink="/tabs/chat" *ngFor="let item of items; let index"  routerDirection="forward">
+          <ion-avatar slot="start" class="avatar">
+            <img  alt="Silhouette of mountains" src="https://www.pcgamesn.com/wp-content/sites/pcgamesn/2023/08/warhammer-40k-space-marine-2-starship-troopers-hordes-world-war-z-550x309.jpg" />
+          </ion-avatar>
+          <ion-label>Item</ion-label>
+          <ion-badge slot="end">11</ion-badge>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
