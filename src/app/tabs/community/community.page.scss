@@ -1,0 +1,25 @@
+ion-toolbar{
+    background-color:var(--ion-color-viewer_primary);
+  }
+  
+ion-avatar.miniAvatar{
+    max-width: 30px !important;  //any size
+    max-height: 30px !important;
+}
+
+img.centerheader{
+    width: 80px;
+    height: 30px;
+    margin: 0px;
+  }
+
+img.avatar{
+    height: auto;
+    width: 100px;
+    border-radius: 100%;
+}
+
+ion-badge{
+   background:var(--ion-color-viewer_terceari); 
+   color: #fff;
+}

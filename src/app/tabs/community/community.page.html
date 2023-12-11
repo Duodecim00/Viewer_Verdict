@@ -1,13 +1,51 @@
-<ion-header [translucent]="true">
+<ion-header collapse="fade">
   <ion-toolbar>
-    <ion-title>community</ion-title>
+    <ion-grid [fixed]="true">
+      <ion-row>
+        <ion-col class="header">
+          <ion-avatar
+            class="miniAvatar"
+          >
+            <ion-img src="../../../../assets/img/serve.png"></ion-img>
+          </ion-avatar>
+        </ion-col>
+        <ion-col class="header">
+          <img class="centerheader" src="../../assets/img/logo_VV_blanco_mini.png"
+        /></ion-col>
+        <ion-col class="header"> </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <ion-segment value="all">
+      <ion-segment-button >
+        <ion-label>PEOPLE</ion-label>
+      </ion-segment-button>
+      <ion-segment-button >
+        <ion-label>GROUPS</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">community</ion-title>
-    </ion-toolbar>
-  </ion-header>
+
+<ion-content>
+  <ion-item-sliding *ngFor="let item of items; let index">
+    
+    <ion-item >
+      <ion-thumbnail slot="start">
+        
+            <img class="avatar" [src]="'https://picsum.photos/80/80?random=' + index" alt="avatar" />
+          
+      </ion-thumbnail>
+      <ion-label>Sliding Item with Icons Only</ion-label>
+      <ion-badge color="warning">11</ion-badge>
+    </ion-item>
+
+    <ion-item-options side="end">
+      <ion-item-option color="danger">
+        <ion-icon slot="icon-only" name="trash"></ion-icon>
+      </ion-item-option>
+    </ion-item-options>
+  </ion-item-sliding>
 </ion-content>
