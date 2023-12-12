@@ -40,4 +40,8 @@ export class DiscoverPage implements OnInit {
       (ev as InfiniteScrollCustomEvent).target.complete();
     }, 500);
   }
+
+  public progress = 0;
+
+ 
 }

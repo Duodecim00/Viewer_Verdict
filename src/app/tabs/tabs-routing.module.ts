@@ -38,6 +38,14 @@ const routes: Routes = [
     path: 'chat',
     loadChildren: () => import('./chat/chat.module').then( m => m.ChatPageModule)
   },
+  {
+    path: 'reviewcoment',
+    loadChildren: () => import('./reviewcoment/reviewcoment.module').then( m => m.ReviewcomentPageModule)
+  },
+  {
+    path: 'user',
+    loadChildren: () => import('./user/user.module').then( m => m.UserPageModule)
+  },
 
   
 ];

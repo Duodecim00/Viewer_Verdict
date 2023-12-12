@@ -130,3 +130,13 @@ ion-card-subtitle.review{
     font-size: 18px;
     color: var(--ion-color-viewer_terceari);
 }
+
+ion-card-content{
+    color: #fff;
+}
+
+
+ion-backdrop {
+    background: var(--ion-color-viewer_secundary-contrast);
+    opacity: 0.7;
+  }

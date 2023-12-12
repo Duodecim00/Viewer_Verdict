@@ -12,6 +12,7 @@
   </ion-toolbar>
 </ion-header>
 
+<ion-backdrop [visible]="true"></ion-backdrop>
 <ion-content [fullscreen]="true">
   <ion-content style="height: 100%;">
   <ion-list class="chat" lines="none" >
@@ -62,7 +63,6 @@
     </ion-col>
       <ion-col size="2">
           <ion-button ><ion-icon name="send"></ion-icon></ion-button>
-        
       </ion-col>
     </ion-row>
   </ion-grid>
