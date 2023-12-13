@@ -46,6 +46,10 @@ const routes: Routes = [
     path: 'user',
     loadChildren: () => import('./user/user.module').then( m => m.UserPageModule)
   },
+  {
+    path: 'groupchat',
+    loadChildren: () => import('./groupchat/groupchat.module').then( m => m.GroupchatPageModule)
+  },
 
   
 ];

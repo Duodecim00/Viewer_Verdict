@@ -3,11 +3,12 @@
       <ion-button slot="start" fill="clear">
       <ion-button class="backbtn" routerLink="/tabs/discover" routerDirection="back"><ion-icon name="arrow-back-outline"></ion-icon></ion-button>
       </ion-button>
+      <ion-progress-bar type="indeterminate"></ion-progress-bar>
   </ion-toolbar>
 </ion-header>
 
 
-
+<ion-backdrop [visible]="true"></ion-backdrop>
 <ion-content>
 
   <ion-card>

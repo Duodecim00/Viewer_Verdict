@@ -4,9 +4,12 @@
       <ion-button color="funaprimary" class="backbtn" routerLink="/tabs/discover" routerDirection="back"><ion-icon name="arrow-back-outline"></ion-icon></ion-button>
       </ion-button>
     <ion-title>Your Watchlist</ion-title>
+    <ion-progress-bar type="indeterminate"></ion-progress-bar>
   </ion-toolbar>
 </ion-header>
 
+
+<ion-backdrop [visible]="true"></ion-backdrop>
 <ion-content [fullscreen]="true">
   <ion-list>
     <ion-item-sliding style="height: auto;">
