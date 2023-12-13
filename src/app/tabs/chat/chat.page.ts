@@ -26,4 +26,11 @@ export class ChatPage implements OnInit {
       (ev as InfiniteScrollCustomEvent).target.complete();
     }, 500);
   }
+
+  handleRefresh(event: any) {
+    setTimeout(() => {
+      //aqui pones las llamadas a las funciones que quieres actualizar
+      event.target.complete();
+    }, 2000);
+  }
 }

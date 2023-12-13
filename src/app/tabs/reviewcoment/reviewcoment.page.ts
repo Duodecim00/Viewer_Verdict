@@ -12,4 +12,10 @@ export class ReviewcomentPage implements OnInit {
   ngOnInit() {
   }
 
+  handleRefresh(event: any) {
+    setTimeout(() => {
+      //aqui pones las llamadas a las funciones que quieres actualizar
+      event.target.complete();
+    }, 2000);
+  }
 }

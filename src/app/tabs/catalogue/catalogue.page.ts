@@ -73,6 +73,11 @@ export class CataloguePage implements OnInit {
    
   }
   
-
+  handleRefresh(event: any) {
+    setTimeout(() => {
+      //aqui pones las llamadas a las funciones que quieres actualizar
+      event.target.complete();
+    }, 2000);
+  }
 
 }

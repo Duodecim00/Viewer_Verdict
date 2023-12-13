@@ -165,6 +165,9 @@
 </ion-toolbar>
 
 <ion-card-content>
+  <ion-refresher slot="fixed" [pullFactor]="0.5" [pullMin]="100" [pullMax]="200" (ionRefresh)="handleRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
     <ion-list>
       <ion-card  *ngFor="let item of itemsSeasons; let index">
       <ion-toolbar class="ion-activatable ripple-parent">
